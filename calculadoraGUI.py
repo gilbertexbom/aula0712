@@ -30,13 +30,15 @@ while True:
         janela['num1'].set_focus()
         janela['soma'].update(True)
     else:
+        # Entradas
+        v1 = int(valor['num1'])
+        v2 = int(valor['num2'])
+
+        # Processamento
         if valor['soma']:
-            v1 = int(valor['num1'])
-            v2 = int(valor['num2'])
             total = calc.soma(v1, v2)
-            janela['total'].update('{}'.format(total))
         else:
-            v1 = int(valor['num1'])
-            v2 = int(valor['num2'])
             total = calc.sub(v1, v2)
-            janela['total'].update('{}'.format(total))
+
+        # Saída
+        janela['total'].update('{}'.format(total))
